@@ -167,7 +167,7 @@ def main():
 
             fig.layout.update(xaxis_rangeslider_visible=True,
             xaxis_title="Year", yaxis_title="Median World Sales", hovermode='x')
-            fig.update_layout(title = "Mean Movie Sales over years for " + selected_distributor, title_x=0.5)
+            fig.update_layout(title = "Mean Movie Sales over years for ", title_x=0.5)
             st.plotly_chart(fig, use_container_width=True)
         plot_raw_data()
 
