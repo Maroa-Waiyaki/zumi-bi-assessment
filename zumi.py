@@ -159,7 +159,7 @@ def main():
             lin_df = df1.groupby('Release Year')[[' World Sales (in $) ']].mean().reset_index()
             fig = go.Figure()
             fig.add_trace(go.Scatter(
-            name="Trend of Movie and TV Shows Release",
+            name="Average World Sales for Movies",
             x=lin_df['Release Year'], 
             y=lin_df[' World Sales (in $) '],
             showlegend=True,
@@ -167,7 +167,7 @@ def main():
 
             fig.layout.update(xaxis_rangeslider_visible=True,
             xaxis_title="Year", yaxis_title="Median World Sales", hovermode='x')
-            fig.update_layout(title = "Median Movie Sales over years", title_x=0.5)
+            fig.update_layout(title = "Mean Movie Sales over years for " + selected_distributor, title_x=0.5)
             st.plotly_chart(fig, use_container_width=True)
         plot_raw_data()
 
